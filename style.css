@@ -1,18 +1,18 @@
 * {
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
   margin: 0;
-  background: #f8fafc;
-  color: #0f172a;
+  background: #020617;
+  color: #e5e7eb;
   transition: background 0.3s, color 0.3s;
 }
 
-body.dark {
-  background: #020617;
-  color: #e5e7eb;
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
 }
 
 /* NAV */
@@ -35,7 +35,7 @@ nav h2 {
 .toggle-label {
   width: 56px;
   height: 30px;
-  background: #94a3b8;
+  background: #22c55e;
   border-radius: 999px;
   position: relative;
   cursor: pointer;
@@ -48,16 +48,16 @@ nav h2 {
   border-radius: 50%;
   position: absolute;
   top: 3px;
-  left: 4px;
+  left: 28px;
   transition: transform 0.3s;
 }
 
-#darkToggle:checked + .toggle-label {
-  background: #22c55e;
+body.light .toggle-label {
+  background: #94a3b8;
 }
 
-#darkToggle:checked + .toggle-label .toggle-circle {
-  transform: translateX(26px);
+body.light .toggle-circle {
+  transform: translateX(-24px);
 }
 
 /* HERO */
@@ -117,31 +117,36 @@ h2 {
 
 .skill-grid span {
   padding: 8px 14px;
-  background: #e2e8f0;
+  background: #1e293b;
   border-radius: 6px;
 }
 
-body.dark .skill-grid span {
-  background: #1e293b;
+body.light .skill-grid span {
+  background: #e2e8f0;
 }
 
 /* PROJECTS */
 .project-card {
-  padding: 20px;
-  border: 1px solid #cbd5f5;
-  border-radius: 12px;
-  margin-bottom: 20px;
+  padding: 24px;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
 }
 
 .project-links a {
-  margin-right: 15px;
-  color: #2563eb;
+  margin-right: 16px;
+  color: #60a5fa;
 }
 
 /* CONTACT */
 .socials a {
   margin-right: 20px;
-  color: #2563eb;
+  color: #60a5fa;
 }
 
 /* FOOTER */
